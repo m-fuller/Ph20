@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  14 MAY 2018 03:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  14 MAY 2018 03:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -612,32 +612,42 @@ Type  H <return>  for immediate help.
 l.27 
      
 ? 
-No file vc.log.
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--30
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 28--30
+Underfull \hbox (badness 10000) in paragraph at lines 28--29
 
  []
 
+File: vc.log  (verbatim)
+[1
+
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.30 
+     
+? 
 
 Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
 File: ode.py  (verbatim)
-[1
-
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]pdfTeX w
-arning (ext4): destination with the same identifier (name{page.}) has been alre
-ady used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.32 	\verbatiminput{ode.py}
-                            ^^M [2]
+                            ^^M [2]pdfTeX warning (ext4): destination with the 
+same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.32 	\verbatiminput{ode.py}
+                            ^^M [3]
 Overfull \hbox (207.9035pt too wide) in paragraph at lines 32--32
 []    \OT1/cmtt/m/n/12 plt.plot(t,(np.power(np.sin(t+phix),2)+np.power(np.cos(t
 +phiv),2)) - (np.power(xEx,2)+np.power(vEx,2)),'m-')[] 
@@ -648,7 +658,7 @@ een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.32 	\verbatiminput{ode.py}
-                            ^^M [3]
+                            ^^M [4]
 Overfull \hbox (207.9035pt too wide) in paragraph at lines 32--32
 []    \OT1/cmtt/m/n/12 plt.plot(t,(np.power(np.sin(t+phix),2)+np.power(np.cos(t
 +phiv),2)) - (np.power(xIm,2)+np.power(vIm,2)),'m-')[] 
@@ -659,12 +669,12 @@ een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.32 	\verbatiminput{ode.py}
-                            ^^M [4]pdfTeX warning (ext4): destination with the 
+                            ^^M [5]pdfTeX warning (ext4): destination with the 
 same identifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.32 	\verbatiminput{ode.py}
-                            ^^M [5]
+                            ^^M [6]
 Overfull \hbox (65.87843pt too wide) in paragraph at lines 32--32
 []\OT1/cmtt/m/n/12 phaseSpace(iterFunc[1],iterFunc[2],iterFunc[3],iterFunc[4],i
 terSymFunc[0],iterSymFunc[1])[] 
@@ -675,7 +685,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
-<vstimePlots.png, id=25, 1011.78pt x 722.7pt>
+<vstimePlots.png, id=28, 1011.78pt x 722.7pt>
 File: vstimePlots.png Graphic file (type png)
  <use vstimePlots.png>
 Package pdftex.def Info: vstimePlots.png used on input line 37.
@@ -690,7 +700,7 @@ een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.38 
-      [6] <errorPlot.png, id=30, 1011.78pt x 722.7pt>
+      [7] <errorPlot.png, id=34, 1011.78pt x 722.7pt>
 File: errorPlot.png Graphic file (type png)
  <use errorPlot.png>
 Package pdftex.def Info: errorPlot.png used on input line 40.
@@ -705,8 +715,8 @@ een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.42 	\indent
-             \textbf{Problem 4}\\ [7 <./vstimePlots.png> <./errorPlot.png>]
-<energyPlot.png, id=37, 1011.78pt x 722.7pt>
+             \textbf{Problem 4}\\ [8 <./vstimePlots.png> <./errorPlot.png>]
+<energyPlot.png, id=40, 1011.78pt x 722.7pt>
 File: energyPlot.png Graphic file (type png)
  <use energyPlot.png>
 Package pdftex.def Info: energyPlot.png used on input line 43.
@@ -716,20 +726,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--44
 
  []
 
-<implicitPlot.png, id=38, 1011.78pt x 722.7pt>
+<implicitPlot.png, id=41, 1011.78pt x 722.7pt>
 File: implicitPlot.png Graphic file (type png)
  <use implicitPlot.png>
 Package pdftex.def Info: implicitPlot.png used on input line 46.
 (pdftex.def)             Requested size: 435.32419pt x 310.95343pt.
 
-<errorImplicitPlot.png, id=39, 1011.78pt x 722.7pt>
+<errorImplicitPlot.png, id=42, 1011.78pt x 722.7pt>
 File: errorImplicitPlot.png Graphic file (type png)
 
 <use errorImplicitPlot.png>
 Package pdftex.def Info: errorImplicitPlot.png used on input line 47.
 (pdftex.def)             Requested size: 435.32419pt x 310.95343pt.
 
-<energyImplicitPlot.png, id=40, 1011.78pt x 722.7pt>
+<energyImplicitPlot.png, id=43, 1011.78pt x 722.7pt>
 File: energyImplicitPlot.png Graphic file (type png)
 
 <use energyImplicitPlot.png>
@@ -745,17 +755,17 @@ een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.49 
-      [8 <./energyPlot.png>]pdfTeX warning (ext4): destination with the same id
+      [9 <./energyPlot.png>]pdfTeX warning (ext4): destination with the same id
 entifier (name{page.}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.49 
-      [9 <./implicitPlot.png> <./errorImplicitPlot.png>]
+      [10 <./implicitPlot.png> <./errorImplicitPlot.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
-<phaseSpace.png, id=50, 1011.78pt x 722.7pt>
+<phaseSpace.png, id=53, 1011.78pt x 722.7pt>
 File: phaseSpace.png Graphic file (type png)
  <use phaseSpace.png>
 Package pdftex.def Info: phaseSpace.png used on input line 53.
@@ -770,8 +780,8 @@ een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.54 
-      [10 <./energyImplicitPlot.png>]
-<energySymplecticPlot.png, id=55, 1011.78pt x 722.7pt>
+      [11 <./energyImplicitPlot.png>]
+<energySymplecticPlot.png, id=58, 1011.78pt x 722.7pt>
 File: energySymplecticPlot.png Graphic file (type png)
 
 <use energySymplecticPlot.png>
@@ -787,8 +797,8 @@ een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.58 	\indent
-             \textbf{Problem 4}\\ [11 <./phaseSpace.png> <./energySymplecticPlo
-t.png>] <vSymPlot.png, id=61, 1011.78pt x 722.7pt>
+             \textbf{Problem 4}\\ [12 <./phaseSpace.png> <./energySymplecticPlo
+t.png>] <vSymPlot.png, id=64, 1011.78pt x 722.7pt>
 File: vSymPlot.png Graphic file (type png)
  <use vSymPlot.png>
 Package pdftex.def Info: vSymPlot.png used on input line 59.
@@ -804,7 +814,7 @@ een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.61 \end{document}
-                    [12 <./vSymPlot.png>]
+                    [13 <./vSymPlot.png>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 61.
  (./set4.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 61.
@@ -821,10 +831,10 @@ Package rerunfilecheck Info: Checksums for `set4.out':
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 61.
  ) 
 Here is how much of TeX's memory you used:
- 10365 strings out of 493014
- 154159 string characters out of 6133351
+ 10366 strings out of 493014
+ 154170 string characters out of 6133351
  264800 words of memory out of 5000000
- 13727 multiletter control sequences out of 15000+600000
+ 13728 multiletter control sequences out of 15000+600000
  7619 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,7n,64p,243b,471s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -832,10 +842,10 @@ Here is how much of TeX's memory you used:
 ></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
 sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on set4.pdf (12 pages, 1433086 bytes).
+Output written on set4.pdf (13 pages, 1434487 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
+ 87 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
