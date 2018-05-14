@@ -1,11 +1,11 @@
 #Generate completed assignment PDF
 .PHONY : pdf
-pdf : document.tex *.png
+pdf : set4.tex *.png
 	pdflatex $<
 
 # Generate plots
 %.png : ode.py
-	python $<
+	python $< 0 0.8 100000 0.001 # Change python code command line arguments
 
 #Generate version control log
 vc.log : 
@@ -14,4 +14,7 @@ vc.log :
 .PHONY : clean
 clean : 
 	rm -f *.png
-	rm *.pdf
+	rm set4.pdf
+	rm set4.aux
+	rm set4.log
+	rm set.out
