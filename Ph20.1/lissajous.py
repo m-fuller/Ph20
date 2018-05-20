@@ -51,17 +51,21 @@ def xyzPlot():
     plt.plot(n*delT,funcs[1],'y-',label='Y(t)')
     if funcCall !=0:
         plt.plot(n*delT,funcs[2],'b-',label='Z(t)')
-    plt.xlabel('time (t)')
-    plt.legend()
+    plt.xlabel('time (t)', fontsize=18)
+    plt.legend(prop={'size': 20})
+    plt.xticks(fontsize=18)
+    plt.yticks(fontsize=18)
 
 def lissajous():
 
     plt.subplot(212)
     plt.plot(funcs[0],funcs[1],label='X(t) vs Y(t)')
-    plt.xlabel('X(t)')
-    plt.ylabel('Y(t)')
-    plt.text(-8, -18, '$f_X$ = '+str(fx)+', $f_Y$ = '+str(fy)+', $A_X$ = '+str(ax)+', $A_Y$ = '+str(ay)+', $\phi$ = '+str(phi)+', $\Delta$ t = '+str(delT)+', N = '+ str(N))
-    plt.subplots_adjust(hspace=0.4)
+    plt.xlabel('X(t)', fontsize=18)
+    plt.ylabel('Y(t)', fontsize=18)
+    plt.text(-10, -18, '$f_X$ = '+str(fx)+', $f_Y$ = '+str(fy)+', $A_X$ = '+str(ax)+', $A_Y$ = '+str(ay)+', $\phi$ = '+(str(phi))[:5]+', $\Delta$ t = '+str(delT)+', N = '+ str(N), fontsize=16)
+    plt.subplots_adjust(hspace=0.25)
+    plt.xticks(fontsize=18)
+    plt.yticks(fontsize=18)
 
     plt.show()
 
@@ -69,10 +73,12 @@ def beats():
 
     plt.subplot(212)
     plt.plot(n*delT,funcs[2],label='Z(t)')
-    plt.xlabel('time (t)')
-    plt.ylabel('Z(t)')
-    plt.text(-4, -35, '$f_X$ = '+str(fx)+', $f_Y$ = '+str(fy)+', $A_X$ = '+str(ax)+', $A_Y$ = '+str(ay)+', $\phi$ = '+str(phi)+', $\Delta$ t = '+str(delT)+', N = '+ str(N)+', $\omega_1$ = '+ str(2*pi*fx)+', $\omega_2$ = '+ str(2*pi*fy))
-    plt.subplots_adjust(hspace=0.4)
+    plt.xlabel('time (t)', fontsize=18)
+    plt.ylabel('Z(t)', fontsize=18)
+    plt.text(-8.5, -36, '$f_X$ = '+str(fx)+', $f_Y$ = '+str(fy)+', $A_X$ = '+str(ax)+', $A_Y$ = '+str(ay)+', $\phi$ = '+str(phi)+', $\Delta$ t = '+str(delT)+', N = '+ str(N)+', $\omega_1$ = '+ (str(2*pi*fx))[:5]+', $\omega_2$ = '+ (str(2*pi*fy))[:5], fontsize=16)
+    plt.subplots_adjust(hspace=0.25)
+    plt.xticks(fontsize=18)
+    plt.yticks(fontsize=18)
 
     plt.show()
     

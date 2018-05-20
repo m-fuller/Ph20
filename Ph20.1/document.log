@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  8 APR 2018 23:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  20 MAY 2018 01:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -612,11 +612,11 @@ File: e3a.png Graphic file (type png)
 Package pdftex.def Info: e3a.png used on input line 29.
 (pdftex.def)             Requested size: 232.17241pt x 147.74643pt.
 
-<pi3a.png, id=6, 794.97pt x 505.89pt>
+<pi3a.png, id=6, 801.4743pt x 520.344pt>
 File: pi3a.png Graphic file (type png)
  <use pi3a.png>
 Package pdftex.def Info: pi3a.png used on input line 30.
-(pdftex.def)             Requested size: 232.17241pt x 147.74643pt.
+(pdftex.def)             Requested size: 232.17241pt x 150.72916pt.
 
 <3aRational1.png, id=7, 794.97pt x 505.89pt>
 File: 3aRational1.png Graphic file (type png)
@@ -639,64 +639,64 @@ File: 3b1.png Graphic file (type png)
 Package pdftex.def Info: 3b1.png used on input line 42.
 (pdftex.def)             Requested size: 232.17241pt x 147.74643pt.
 
-<3b2.png, id=34, 794.97pt x 505.89pt>
+<3b2.png, id=34, 808.7013pt x 520.344pt>
 File: 3b2.png Graphic file (type png)
  <use 3b2.png>
 Package pdftex.def Info: 3b2.png used on input line 43.
-(pdftex.def)             Requested size: 232.17241pt x 147.74643pt.
+(pdftex.def)             Requested size: 232.17241pt x 149.38733pt.
 
-<3b4.png, id=35, 794.97pt x 505.89pt>
+<3b4.png, id=35, 838.332pt x 520.344pt>
 File: 3b4.png Graphic file (type png)
  <use 3b4.png>
 Package pdftex.def Info: 3b4.png used on input line 45.
-(pdftex.def)             Requested size: 232.17241pt x 147.74643pt.
+(pdftex.def)             Requested size: 232.17241pt x 144.09941pt.
 
-<3b5.png, id=36, 794.97pt x 505.89pt>
+<3b5.png, id=36, 820.2645pt x 520.344pt>
 File: 3b5.png Graphic file (type png)
  <use 3b5.png>
 Package pdftex.def Info: 3b5.png used on input line 46.
-(pdftex.def)             Requested size: 232.17241pt x 147.74643pt.
+(pdftex.def)             Requested size: 232.17241pt x 147.28328pt.
 
-<3c1.png, id=37, 794.97pt x 505.89pt>
+<3c1.png, id=37, 821.7099pt x 520.344pt>
 File: 3c1.png Graphic file (type png)
  <use 3c1.png>
 Package pdftex.def Info: 3c1.png used on input line 53.
-(pdftex.def)             Requested size: 232.17241pt x 147.74643pt.
+(pdftex.def)             Requested size: 232.17241pt x 147.02127pt.
 
-<3c2.png, id=38, 794.97pt x 505.89pt>
+<3c2.png, id=38, 794.97pt x 520.344pt>
 File: 3c2.png Graphic file (type png)
  <use 3c2.png>
 Package pdftex.def Info: 3c2.png used on input line 54.
-(pdftex.def)             Requested size: 232.17241pt x 147.74643pt.
+(pdftex.def)             Requested size: 232.17241pt x 151.96776pt.
 
-<3c3.png, id=39, 794.97pt x 505.89pt>
+<3c3.png, id=39, 800.0289pt x 520.344pt>
 File: 3c3.png Graphic file (type png)
  <use 3c3.png>
 Package pdftex.def Info: 3c3.png used on input line 58.
-(pdftex.def)             Requested size: 232.17241pt x 147.74643pt.
+(pdftex.def)             Requested size: 232.17241pt x 151.00705pt.
 
-<3c4.png, id=40, 794.97pt x 505.89pt>
+<3c4.png, id=40, 795.6927pt x 520.344pt>
 File: 3c4.png Graphic file (type png)
  <use 3c4.png>
 Package pdftex.def Info: 3c4.png used on input line 60.
-(pdftex.def)             Requested size: 232.17241pt x 147.74643pt.
+(pdftex.def)             Requested size: 232.17241pt x 151.82484pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.64 	\newpage
                [2 <./3b1.png> <./3b2.png> <./3b4.png> <./3b5.png> <./3c1.png> <
-./3c2.png>] <41.png, id=60, 794.97pt x 505.89pt>
+./3c2.png>] <41.png, id=60, 794.97pt x 520.344pt>
 File: 41.png Graphic file (type png)
  <use 41.png>
 Package pdftex.def Info: 41.png used on input line 68.
-(pdftex.def)             Requested size: 232.17241pt x 147.74643pt.
+(pdftex.def)             Requested size: 232.17241pt x 151.96776pt.
 
-<42.png, id=61, 794.97pt x 505.89pt>
+<42.png, id=61, 795.6927pt x 520.344pt>
 File: 42.png Graphic file (type png)
  <use 42.png>
 Package pdftex.def Info: 42.png used on input line 69.
-(pdftex.def)             Requested size: 232.17241pt x 147.74643pt.
+(pdftex.def)             Requested size: 232.17241pt x 151.82484pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
@@ -751,7 +751,7 @@ e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on document.pdf (4 pages, 3286265 bytes).
+Output written on document.pdf (4 pages, 5020886 bytes).
 PDF statistics:
  138 PDF objects out of 1000 (max. 8388607)
  87 compressed objects within 1 object stream
