@@ -3,15 +3,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 
-# Run 'python ode.py 0 0.8 100000 0.001' to reproduce my work
+# Run 'python ode.py 0 0.8 100 0.001' to reproduce my work
 
 # Parts 1 and 2 Variables
 
 x0=float(sys.argv[1]) #initial position 
 v0=float(sys.argv[2]) #initial velocity 
 t0=0 
-N=int(sys.argv[3]) # number of time steps
+T=float(sys.argv[3]) # maximum time in seconds
 h0=float(sys.argv[4]) # length of time steps in seconds
+N=int(T/h0) # number of time steps
 
 numHVal=5
 xErrorMax=np.zeros(numHVal)
