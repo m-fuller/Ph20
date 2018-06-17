@@ -3,6 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 
+# Run 'python ode.py 0 0.8 100000 0.001' to reproduce my work
+
 # Parts 1 and 2 Variables
 
 x0=float(sys.argv[1]) #initial position 
@@ -10,9 +12,6 @@ v0=float(sys.argv[2]) #initial velocity
 t0=0 
 N=int(sys.argv[3]) # number of time steps
 h0=float(sys.argv[4]) # length of time steps in seconds
-
-phix=np.arcsin(x0)-t0
-phiv=np.arccos(v0)-t0
 
 numHVal=5
 xErrorMax=np.zeros(numHVal)
@@ -49,8 +48,6 @@ def iterate(h):
     return (t, xEx, vEx, xIm, vIm)
     
 def vstimePlots(t,xEx,vEx):
-    phix=np.arcsin(x0)-t0
-    phiv=np.arccos(v0)-t0
     plt.figure(figsize=(7,5))
     plt.title('Explicit Euler Method')
     plt.subplot(221)
@@ -62,11 +59,13 @@ def vstimePlots(t,xEx,vEx):
     plt.xlabel('time (t)')
     plt.ylabel('v(t)')
     plt.subplot(223)
-    plt.plot(t,np.sin(t+phix)-xEx,'m-')
+    xError=x0*np.cos(t)+v0*np.sin(t)-xEx
+    plt.plot(t,xError,'m-')
     plt.xlabel('time (t)')
     plt.ylabel(r'$x_{analytic}(t)-x(t)$')
     plt.subplot(224)
-    plt.plot(t,np.cos(t+phiv)-vEx,'m-')
+    yError=-x0*np.sin(t)+v0*np.cos(t)-vEx
+    plt.plot(t,yError,'m-')
     plt.xlabel('time (t)')
     plt.ylabel(r'$v_{analytic}(t)-v(t)$')
 
@@ -74,15 +73,17 @@ def energyPlot(t,xEx,vEx):
     plt.figure(figsize=(7,5))
     plt.title('Explicit Euler Method')
     plt.subplot(311)
-    plt.plot(t,np.power(xEx,2)+np.power(vEx,2),'r-')
+    eEx=np.power(xEx,2)+np.power(vEx,2)
+    plt.plot(t,eEx,'r-')
     plt.xlabel('time (t)')
-    plt.ylabel('total energy (E)')    
+    plt.ylabel('total energy (E(t))')    
     plt.subplot(312)
-    plt.plot(t,(np.power(np.sin(t+phix),2)+np.power(np.cos(t+phiv),2)),'b-')
+    eAn = np.power(x0*np.cos(t) + v0*np.sin(t),2) + np.power(-x0*np.sin(t) + v0*np.cos(t),2)
+    plt.plot(t,eAn,'b-')
     plt.xlabel('time (t)')
     plt.ylabel(r'$E_{analytic}(t)$')
     plt.subplot(313)
-    plt.plot(t,(np.power(np.sin(t+phix),2)+np.power(np.cos(t+phiv),2)) - (np.power(xEx,2)+np.power(vEx,2)),'m-')
+    plt.plot(t,eAn-eEx,'m-')
     plt.xlabel('time (t)')
     plt.ylabel(r'$E_{analytic}(t)-E(t)$')
 
@@ -91,14 +92,12 @@ def errorPlot():
     plt.title('Explicit Euler Method')
     for i in range(numHVal):
         itFuncs=iterate(h0/(2**i))
-        xErrorMax[i]=np.amax(np.sin(itFuncs[0]+phix)-itFuncs[1])
-    plt.plot(h0/(2**(np.arange(numHVal))),xErrorMax,'mo-')
+        xErrorMax[i]=np.amax(x0*np.cos(itFuncs[0])+v0*np.sin(itFuncs[0]) - itFuncs[1])
+    plt.plot(h0/2**np.arange(0,numHVal),xErrorMax,'mo-')
     plt.xlabel('h')
     plt.ylabel(r'$max(x_{analytic}(t)-x(t))$')
 
 def implicitPlot(t,xIm,vIm):
-    phix=np.arcsin(x0)-t0
-    phiv=np.arccos(v0)-t0
     plt.figure(figsize=(7,5))
     plt.title('Implicit Euler Method')
     plt.subplot(221)
@@ -110,11 +109,13 @@ def implicitPlot(t,xIm,vIm):
     plt.xlabel('time (t)')
     plt.ylabel('v(t)')
     plt.subplot(223)
-    plt.plot(t,np.sin(t+phix)-xIm,'m-')
+    xError=x0*np.cos(t)+v0*np.sin(t)-xIm
+    plt.plot(t,xError,'m-')
     plt.xlabel('time (t)')
     plt.ylabel(r'$x_{analytic}(t)-x(t)$')
     plt.subplot(224)
-    plt.plot(t,np.cos(t+phiv)-vIm,'m-')
+    yError=-x0*np.sin(t)+v0*np.cos(t)-vIm
+    plt.plot(t,yError,'m-')
     plt.xlabel('time (t)')
     plt.ylabel(r'$y_{analytic}(t)-y(t)$')   
   
@@ -122,15 +123,17 @@ def energyImplicitPlot(t,xIm,vIm):
     plt.figure(figsize=(7,5))
     plt.title('Implicit Euler Method')
     plt.subplot(311)
-    plt.plot(t,np.power(xIm,2)+np.power(vIm,2),'r-')
+    eIm=np.power(xIm,2)+np.power(vIm,2)
+    plt.plot(t,eIm,'r-')
     plt.xlabel('time (t)')
-    plt.ylabel('total energy (E)')    
+    plt.ylabel('total energy (E(t))')    
     plt.subplot(312)
-    plt.plot(t,(np.power(np.sin(t+phix),2)+np.power(np.cos(t+phiv),2)),'b-')
+    eAn = np.power(x0*np.cos(t) + v0*np.sin(t),2) + np.power(-x0*np.sin(t) + v0*np.cos(t),2)
+    plt.plot(t,eAn,'b-')
     plt.xlabel('time (t)')
     plt.ylabel(r'$E_{analytic}(t)$')
     plt.subplot(313)
-    plt.plot(t,(np.power(np.sin(t+phix),2)+np.power(np.cos(t+phiv),2)) - (np.power(xIm,2)+np.power(vIm,2)),'m-')
+    plt.plot(t,eAn-eIm,'m-')
     plt.xlabel('time (t)')
     plt.ylabel(r'$E_{analytic}(t)-E(t)$') 
      
@@ -139,8 +142,8 @@ def errorImplicitPlot():
     plt.title('Implicit Euler Method')
     for i in range(numHVal):
         itFuncs=iterate(h0/(2**i))
-        xErrorMaxIm[i]=np.amax(np.sin(itFuncs[0]+phix)-itFuncs[3])
-    plt.plot(h0/(2**(np.arange(numHVal))),xErrorMaxIm,'mo-')
+        xErrorMaxIm[i] = np.amax(x0*np.cos(itFuncs[0]) + v0*np.sin(itFuncs[0]) - itFuncs[3])
+    plt.plot(h0/2**np.arange(0,numHVal),xErrorMaxIm,'mo-')
     plt.xlabel('h')
     plt.ylabel(r'$max(x_{analytic}(t)-x(t))$')
 
@@ -187,10 +190,9 @@ def energySymplecticPlot(t,xSym,vSym):
     plt.ylabel('total energy (E)')
     
 def vSymPlot(t,vSym):
-    phiv=np.arccos(v0)-t0
     plt.figure(figsize=(7,5))
     plt.plot(t,vSym,'r-',label='Symplectic')
-    plt.plot(t,np.cos(t+phiv),'b-',label='Exact')
+    plt.plot(t,-x0*np.sin(t)+v0*np.cos(t),'b--',label='Exact')
     plt.xlabel('time(t)')
     plt.ylabel('v(t)')
     plt.legend()
